@@ -16,7 +16,7 @@
 }
 
 header,
-main {
+.curriculum-container {
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -113,6 +113,97 @@ main {
   font-size: 20px;
   font-weight: bold;
   line-height: 30px;
+}
+/* ======= curriculum ======= */
+main section {
+  width: 100vw;
+  background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.curriculum-container {
+  padding: 60px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+.curriculum-title {
+  font-size: 2.875rem;
+  font-weight: bold;
+  line-height: 3.6rem;
+  color: #000000;
+  letter-spacing: 0;
+}
+.curriculum-card-description {
+  font-size: 0.94rem;
+  font-weight: 500;
+  line-height: 1.768rem;
+  color: #808080;
+  letter-spacing: 0;
+}
+.curriculum-card-btn {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.768rem;
+  text-decoration: none;
+}
+.curriculum-cards > :nth-child(1) > .curriculum-card-btn {
+  color: #64c8ff;
+}
+.curriculum-cards > :nth-child(2) > .curriculum-card-btn {
+  color: #f0aa00;
+}
+
+.curriculum-cards > :nth-child(3) > .curriculum-card-btn {
+  color: #8700ff;
+}
+.curriculum-cards {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 28px;
+}
+.curriculum-card {
+  padding: 52px 40px 53px;
+  border: 0.94px solid #def5ff;
+  border-radius: 18.86px;
+  box-shadow: inset 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(
+    to bottom,
+    #def5ff 0%,
+    #ffffff 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.curriculum-cards > :nth-child(2) {
+  border: 0.94px solid #fff4dc;
+  background: linear-gradient(
+    to bottom,
+    #fff4dc 0%,
+    #ffffff 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+}
+.curriculum-cards > :nth-child(3) {
+  border: 0.94px solid #f2e8ff;
+  background: linear-gradient(
+    to bottom,
+    #eee1ff 0%,
+    #ffffff 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
 }
 
 /* ========= Responsive for mobile ========= */
