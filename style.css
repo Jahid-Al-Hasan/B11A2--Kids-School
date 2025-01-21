@@ -137,6 +137,13 @@ main section {
   color: #000000;
   letter-spacing: 0;
 }
+.curriculum-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.9rem;
+  color: #202020;
+  letter-spacing: 0;
+}
 .curriculum-card-description {
   font-size: 0.94rem;
   font-weight: 500;
@@ -214,7 +221,7 @@ main section {
     margin: 0;
   }
   .banner,
-  main {
+  .curriculum-container {
     margin: 0 16px;
   }
   .navbar {
@@ -270,5 +277,42 @@ main section {
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
+  }
+
+  /* curriculum section */
+  .curriculum-container {
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 40px 0 20px;
+  }
+  .curriculum-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: normal;
+    color: #000000;
+    letter-spacing: 0;
+  }
+  .curriculum-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    color: #202020;
+    letter-spacing: 0;
+  }
+  .curriculum-card-description {
+    font-size: 0.63rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    color: #808080;
+    letter-spacing: 0;
+  }
+  .curriculum-cards {
+    flex-direction: column;
+    gap: 12.3px;
+  }
+  .curriculum-card {
+    padding: 2.25rem 5rem;
+    gap: 22px;
   }
 }
