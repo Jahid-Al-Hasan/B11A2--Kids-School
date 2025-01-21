@@ -205,9 +205,10 @@ main .curriculum {
   color: #8700ff;
 }
 .curriculum-cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  /* justify-content: space-between; */
   /* align-items: center; */
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
 }
 .curriculum-card {
@@ -574,7 +575,8 @@ marquee {
     letter-spacing: 0;
   }
   .curriculum-cards {
-    flex-direction: column;
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
     gap: 12.3px;
   }
   .curriculum-card {
