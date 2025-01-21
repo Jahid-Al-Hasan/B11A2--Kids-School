@@ -6,7 +6,8 @@
 }
 
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .quicksand-font {
   font-family: "Quicksand", serif;
@@ -15,13 +16,26 @@
   font-style: normal;
 }
 
+.raleway-font {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.75rem;
+}
+
 header,
-.curriculum-container {
+.curriculum-container,
+.story-container {
   max-width: 1160px;
   margin: 0 auto;
 }
 
 /* ======= shard style ======= */
+#story-btn-3 {
+  background-color: #5d58f0;
+}
 
 /* ======= navar ======= */
 .navbar {
@@ -115,14 +129,15 @@ header,
   line-height: 30px;
 }
 /* ======= curriculum ======= */
-main section {
-  width: 100vw;
+main .curriculum {
+  /* width: 100vw; */
   background-image: url("./assets/bg.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
-.curriculum-container {
+.curriculum-container,
+.story-container {
   padding: 60px 0;
 
   display: flex;
@@ -130,7 +145,8 @@ main section {
   gap: 80px;
   align-items: center;
 }
-.curriculum-title {
+.curriculum-title,
+.story-title {
   font-size: 2.875rem;
   font-weight: bold;
   line-height: 3.6rem;
@@ -229,6 +245,129 @@ main section {
   height: 100%;
 }
 
+/* ======= story section ====== */
+.story {
+  width: 100%;
+  background: linear-gradient(to top, #fea3014d, #ffffff4d),
+    url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ensure the image fills the container */
+  background-position: center;
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 19px;
+}
+.story-cards > :nth-child(1) {
+  grid-row: span 2;
+}
+.story-cards > :nth-child(3),
+.story-cards > :nth-child(4) {
+  display: none;
+}
+.story-card {
+  /* text-align: center; */
+  border: none;
+  border-radius: 16px;
+  background-color: white;
+  overflow: hidden;
+}
+.story-content {
+  padding: 3.75rem 2.375rem 2.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+}
+.story-img img {
+  width: 100%;
+  height: 100%;
+}
+.story-card-btn {
+  border: none;
+  background-color: #3cd8e8;
+  border-radius: 47.93px;
+  padding: 15px 19px;
+  color: white;
+  position: absolute;
+  left: 2.18rem;
+  top: -2.1rem;
+}
+.story-cards > :nth-child(n + 2) .story-card-btn {
+  border: none;
+  background-color: #95b226;
+  border-radius: 47.93px;
+  padding: 10px 19px;
+  color: white;
+  position: absolute;
+  left: 2.18rem;
+  top: -1.56rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* .story-cards > :nth-child(3) .story-card-btn {
+  background-color: #5d58f0;
+} */
+
+.story-content-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  color: #000000;
+}
+.story-cards > :nth-child(n + 2) .story-content-title {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: #000000;
+}
+
+.story-content-description {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.75rem;
+  color: #666666;
+}
+
+/* ========= medium devices ======== */
+@media screen and (max-width: 992px) and (min-width: 577px) {
+  header,
+  section > :nth-child(n) {
+    margin: 0 16px;
+  }
+  .story-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 11.5px;
+  }
+  .story-cards > :nth-child(1) {
+    display: none;
+  }
+  .story-cards > :nth-child(1) {
+    grid-row: span 1;
+  }
+  .story-cards > :nth-child(3),
+  .story-cards > :nth-child(4) {
+    display: block;
+  }
+  .story-card-btn {
+    border: none;
+    background-color: #3cd8e8;
+    border-radius: 28.5px;
+    padding: 0;
+    color: white;
+    position: absolute;
+    left: 2.18rem;
+    top: -2.1rem;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+}
+
 /* ========= Responsive for mobile ========= */
 @media screen and (max-width: 576px) {
   /* navbar and banner style */
@@ -237,7 +376,8 @@ main section {
     margin: 0;
   }
   .banner,
-  .curriculum-container {
+  .curriculum-container,
+  section > :nth-child(n) {
     margin: 0 16px;
   }
   .navbar {
@@ -333,5 +473,36 @@ main section {
   .curriculum-card {
     padding: 2.25rem 5rem;
     gap: 22px;
+  }
+
+  /* story section */
+  .story-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11.5px;
+  }
+  .story-cards > :nth-child(1) {
+    display: none;
+  }
+  .story-cards > :nth-child(1) {
+    grid-row: span 1;
+  }
+  .story-cards > :nth-child(3),
+  .story-cards > :nth-child(4) {
+    display: block;
+  }
+  .story-card-btn {
+    border: none;
+    background-color: #3cd8e8;
+    border-radius: 28.5px;
+    padding: 0;
+    color: white;
+    position: absolute;
+    left: 2.18rem;
+    top: -2.1rem;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
   }
 }
