@@ -36,6 +36,11 @@ header,
 #story-btn-3 {
   background-color: #5d58f0;
 }
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
 .text-white {
   color: white;
 }
