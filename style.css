@@ -212,6 +212,22 @@ main section {
     #ffffff 100%
   );
 }
+.arrow-btn-container {
+  display: flex;
+  gap: 10px;
+}
+.arrow-btn {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  border: none;
+  border-radius: 30px;
+  padding: 17px;
+}
+.arrow-btn img {
+  width: 100%;
+  height: 100%;
+}
 
 /* ========= Responsive for mobile ========= */
 @media screen and (max-width: 576px) {
@@ -280,6 +296,9 @@ main section {
   }
 
   /* curriculum section */
+  .arrow-btn-container {
+    display: none;
+  }
   .curriculum-container {
     gap: 20px;
     text-align: center;
