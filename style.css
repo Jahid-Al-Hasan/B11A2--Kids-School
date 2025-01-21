@@ -376,7 +376,7 @@ footer {
   gap: 10px;
 }
 .footer-logo img {
-  /* background-color: white; */
+  background-color: white;
 }
 .footer-brand {
   font-size: 2.6rem;
@@ -476,7 +476,7 @@ marquee {
   }
 }
 
-/* ========= Responsive for mobile ========= */
+/* ========= Responsive for small device ========= */
 @media screen and (max-width: 576px) {
   /* navbar and banner style */
   .navbar {
