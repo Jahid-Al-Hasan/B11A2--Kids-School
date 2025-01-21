@@ -396,7 +396,35 @@ footer {
 .footer-contact img {
   margin-right: 10px;
 }
-/* ========= medium devices ======== */
+/* marquee tag */
+@keyframes colours {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: rebeccapurple;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+marquee {
+  font-weight: 500;
+  font-size: 3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: rebeccapurple;
+  animation: colours 2s infinite;
+}
+
+/* ========= Responsive for medium devices ======== */
 @media screen and (max-width: 992px) and (min-width: 577px) {
   header,
   section > :nth-child(n) {
