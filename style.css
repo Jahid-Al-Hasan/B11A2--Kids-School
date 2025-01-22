@@ -273,7 +273,7 @@ main .curriculum {
   background: linear-gradient(to top, #fea3014d, #ffffff4d),
     url("./assets/bg.png");
   background-repeat: no-repeat;
-  background-size: contain; /* Ensure the image fills the container */
+  background-size: cover;
   background-position: center;
 }
 
@@ -431,54 +431,7 @@ marquee {
 }
 
 /* ========= Responsive for medium devices ======== */
-@media screen and (max-width: 992px) and (min-width: 577px) {
-  header,
-  section > :nth-child(n) {
-    margin: 0 16px;
-  }
-  .story-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 11.5px;
-  }
-  .story-cards > :nth-child(1) {
-    display: none;
-  }
-  .story-cards > :nth-child(1) {
-    grid-row: span 1;
-  }
-  .story-cards > :nth-child(3),
-  .story-cards > :nth-child(4) {
-    display: block;
-  }
-  .story-card-btn {
-    border: none;
-    background-color: #3cd8e8;
-    border-radius: 28.5px;
-    padding: 0;
-    color: white;
-    position: absolute;
-    left: 2.18rem;
-    top: -2.1rem;
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: 0;
-  }
-  /* footer */
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .footer-container > :nth-child(n) {
-    justify-self: start;
-  }
-}
-
-/* ========= Responsive for small device ========= */
-@media screen and (max-width: 576px) {
-  /* navbar and banner style */
+@media screen and (max-width: 992px) {
   .navbar {
     padding: 12px 16px;
     margin: 0;
@@ -543,6 +496,51 @@ marquee {
     line-height: 30px;
   }
 
+  /* story section */
+  .story-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 11.5px;
+  }
+  .story-cards > :nth-child(1) {
+    display: none;
+  }
+  .story-cards > :nth-child(1) {
+    grid-row: span 1;
+  }
+  .story-cards > :nth-child(3),
+  .story-cards > :nth-child(4) {
+    display: block;
+  }
+  .story-card-btn {
+    border: none;
+    background-color: #3cd8e8;
+    border-radius: 28.5px;
+    padding: 0;
+    color: white;
+    position: absolute;
+    left: 2.18rem;
+    top: -2.1rem;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+  /* footer */
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-container > :nth-child(n) {
+    justify-self: start;
+  }
+}
+
+/* ========= Responsive for small device ========= */
+@media screen and (max-width: 576px) {
+  /* navbar and banner style */
+
   /* curriculum section */
   .arrow-btn-container {
     display: none;
@@ -583,7 +581,6 @@ marquee {
     padding: 2.25rem 5rem;
     gap: 22px;
   }
-
   /* story section */
   .story-container {
     gap: 20px;
